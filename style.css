@@ -1,0 +1,301 @@
+/* IPL Ticket Booking Website - CSS */
+:root {
+  --navy: #071b4d;
+  --blue: #174da2;
+  --gold: #ffcc33;
+  --light: #f4f7fb;
+  --text: #172033;
+  --muted: #596579;
+  --white: #ffffff;
+  --border: #dce3ed;
+  --shadow: 0 5px 18px rgba(7, 27, 77, 0.09);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--light);
+}
+
+/* Header and navigation */
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 16px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+header h1,
+.logo {
+  color: var(--gold);
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+/* Hero banner */
+.hero,
+#banner {
+  padding: 85px 6%;
+  text-align: center;
+  color: var(--white);
+  background: linear-gradient(120deg, var(--navy), var(--blue));
+}
+
+.hero h1,
+#banner h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 15px;
+}
+
+.hero p,
+#banner p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+/* Buttons */
+button,
+.btn,
+input[type="submit"] {
+  display: inline-block;
+  border: none;
+  border-radius: 6px;
+  padding: 11px 18px;
+  background: var(--gold);
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+button:hover,
+.btn:hover,
+input[type="submit"]:hover {
+  background: #f2b900;
+  transform: translateY(-2px);
+}
+
+/* Main content and sections */
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 25px 20px;
+}
+
+section {
+  padding: 30px 0;
+  scroll-margin-top: 20px;
+}
+
+section h2 {
+  color: var(--navy);
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+  border-left: 5px solid var(--gold);
+  padding-left: 12px;
+}
+
+h3 {
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+/* Cards */
+.card,
+.about-card,
+.guideline-card,
+.summary-card,
+.booking-summary {
+  background: var(--white);
+  padding: 22px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  border: 1px solid #edf0f5;
+}
+
+.about-grid,
+.guideline-grid,
+.booking-grid,
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 18px;
+}
+
+ul,
+ol {
+  padding-left: 22px;
+}
+
+/* Team filter */
+.filter,
+.team-filter {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Forms */
+form {
+  background: var(--white);
+  padding: 22px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+label {
+  display: block;
+  margin: 12px 0 5px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  font: inherit;
+  background: white;
+  color: var(--text);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--blue);
+  border-color: var(--blue);
+}
+
+/* Tables */
+.table-container,
+.table-wrap {
+  overflow-x: auto;
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+th,
+td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  background: var(--navy);
+  color: var(--white);
+}
+
+tbody tr:hover {
+  background: #eef4ff;
+}
+
+/* Booking summary */
+.summary-card,
+.booking-summary,
+aside {
+  align-self: start;
+}
+
+.summary-card p,
+.booking-summary p,
+aside p {
+  margin: 10px 0;
+}
+
+.total,
+.total-amount {
+  font-size: 1.4rem;
+  color: #087443;
+  font-weight: bold;
+}
+
+/* Small supporting text */
+.note,
+.small-text {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 22px;
+  background: var(--navy);
+  color: var(--white);
+  margin-top: 30px;
+}
+
+/* Responsive layout */
+@media (max-width: 700px) {
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .hero,
+  #banner {
+    padding: 55px 20px;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  .booking-grid,
+  .about-grid,
+  .guideline-grid,
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
